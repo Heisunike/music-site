@@ -1,0 +1,520 @@
+/*GENERAL*/
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+scroll-behavior: smooth;
+}
+
+body{
+background-color:#fff;
+color:#000;
+font-size:16px;
+font-family:Verdana;
+}
+
+img{
+width:100%;
+height:auto;
+}
+
+.space{
+height:60px;
+background-color:white;
+}
+
+a{
+text-decoration:none;
+color:black;
+}
+
+a:hover {
+color:white;
+}
+
+/*---------------------------------------*/
+
+/*HEADER*/
+
+.nav{
+height:60px;
+text-align:right;
+line-height:65px;
+background-color:white;
+z-index:2;
+position:fixed;
+width:100%;
+box-shadow: 0px 1px 5px;
+}
+
+.menu{
+margin:0 30px 0 0;
+z-index:3;
+}
+
+.menu a{
+font-size:14px;
+clear:right;
+color:black;
+text-decoration:none;
+line-height:40px;
+margin:0 10px;
+transition:.5s;
+padding:5px;
+}
+
+.menu a:hover{
+background-color:black;
+color:white;
+border-radius:0px;
+}
+
+.burger{
+line-height:65px;
+margin:0 40px 0 0;
+display:none;
+font-size:25px;
+width:35px;
+float:right;
+border:none;
+padding:0px 8px;
+background-color:dodgerblue;
+}
+
+#mobmenu{
+display:none;
+}
+
+.nav h3{
+text-align:left;
+float:left;
+margin:0 0 0 30px;
+font-family:cursive;
+}
+
+
+@media screen and (max-width:600px){
+
+.nav h3{
+text-align:right;
+float:left;
+margin:0 0 0 30px;
+font-family:cursive;
+}
+
+.burger{
+display:block;
+cursor:pointer;
+}
+
+.menu{
+text-align:center;
+width:100%;
+display:none;
+margin:0;
+background:#fff;
+}
+
+.menu a{
+display:block;
+margin:0;
+border-bottom:1px solid gray;
+border-radius:30px;
+padding:0;
+}
+
+#mobmenu:checked + .menu{
+display:block;
+}
+
+}
+
+
+/*MAIN*/
+#main{
+background-color:gray;
+color:#000;
+background-image:url("girl2.webp");
+background-repeat:no-repeat;
+background-position:center;
+background-size:cover;
+min-height:500px;
+padding:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+#main h1{
+font-family:cursive;
+color:white;
+line-height:45px;
+}
+
+#main h1 span{
+border-bottom:2px solid dodgerblue;
+border-left:px solid dodgerblue;
+border-radius:10px;
+margin:0px auto 10px;
+}
+
+
+/*LATEST*/
+#latest{
+padding:40px;
+background-color:#fff;
+color:#000;
+line-height:30px;
+text-align:center;
+}
+
+#latest img{
+width:60%;
+height:280px;
+}
+
+#latest h2{
+font-family:cursive;
+color:black;
+line-height:55px;
+text-align:left;
+border:none;
+border-radius:5px;
+}
+
+.latest-card{
+box-shadow:3px 3px 5px lightgray;
+margin-top:20px;
+transition:.5s;
+}
+
+.latest-card:hover{
+transform:scale(0.95);
+border-bottom:2px solid dodgerblue;
+box-shadow:0 0 0;
+}
+
+/*LATEST button*/
+#latest button{
+padding:10px;
+margin:5px auto;
+display:block;
+text-align:center;
+border:none;
+border-radius:5px 5px 0px 0px;
+background-color:dodgerblue;
+color:black;
+}
+
+#latest button:hover{
+background-color:#333;
+color:#fff;
+}
+
+#latest button:active{
+background-color:#333;
+color:#fff;
+text-decoration:underline;
+}
+
+@media screen and (max-width:760px){
+
+/*LATEST*/
+#latest{
+padding:10px;
+line-height:25px;
+}
+
+#latest img{
+width:100%;
+height:auto;
+}
+
+#latest h2{
+line-height:45px;
+}
+
+.latest-card{
+margin-top:0;
+}
+
+/*LATEST button*/
+#latest button{
+padding:7px;
+}
+
+}
+
+/*--------------------------------------*/
+
+/*ALBUM*/
+#album{
+padding:40px;
+background-color:#fff;
+color:#000;
+line-height:40px;
+text-align:center;
+}
+
+#album img{
+width:60%;
+height:280px;
+}
+
+
+#album h2{
+font-family:cursive;
+color:black;
+line-height:55px;
+text-align:left;
+border:none;
+border-radius:5px;
+}
+
+#album p{
+padding:20px;
+text-align:left;
+}
+
+.album-card{
+margin-top:20px;
+}
+
+
+@media screen and (max-width:760px){
+
+/*ALBUM*/
+#album{
+padding:10px;
+line-height:25px;
+text-align:left;
+}
+
+#album img{
+width:100%;
+height:auto;
+}
+
+#album h2{
+line-height:45px;
+}
+
+#album p{
+padding:10px;
+}
+
+.album-card{
+margin-top:0;
+}
+
+}
+
+
+/*-------------------------------------*/
+
+/*TRACKS*/
+#trackcol{
+background-color:white;
+font-size:90%;
+}
+
+
+/*TRACKS track*/
+.track{
+margin:20px auto;
+border-bottom:1px solid #333;
+padding:10px 40px;
+}
+
+/*TRACKS track button*/
+.track button{
+padding:10px;
+margin:5px 0px 5px 80%;
+text-align:right;
+border:none;
+border-radius:3px;
+background:dodgerblue;
+box-shadow:inset 1px 1px 5px;
+transition:.5s;
+}
+
+.track button:hover{
+background-color:#333;
+color:#fff;
+box-shadow:0px 0px 0px;
+}
+
+.track button:active{
+background-color:#333;
+color:#fff;
+text-decoration:underline;
+}
+
+
+.track-banner{
+background-color:white;
+color:#000;
+background-image:url("headphone.webp");
+background-repeat:no-repeat;
+background-position:center;
+background-size:cover;
+min-height:200px;
+padding:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.track-banner h1{
+font-family:cursive;
+color:#fff;
+}
+
+.trackimg{
+width:150px;
+height:150px;
+}
+
+@media screen and (max-width:760px){
+
+/*TRACKS track*/
+.track{
+padding:10px 20px;
+}
+
+/*TRACKS track button*/
+.track button{
+padding:7px;
+margin:5px 0px 5px 250px;
+text-align:right;
+}
+
+.trackimg{
+width:80px;
+height:80px;
+}
+
+}
+
+/*------------------------------------*/
+
+/*ABOUT*/
+
+#about{
+background-color:white;
+line-height:40px;
+font-size:90%;
+}
+
+.about-banner{
+background-image:url("mic.webp");
+background-color:white;
+color:#000;
+background-repeat:no-repeat;
+background-position:center;
+background-size:cover;
+min-height:200px;
+padding:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.about-banner h1{
+font-family:cursive;
+color:#fff;
+}
+
+.biography {
+padding:40px;
+}
+
+.biography a, .album-card a{
+color:red;
+text-decoration:underline;
+}
+
+.biography a:hover, .album-card a:hover{
+color:dodgerblue;
+text-decoration:underline;
+}
+
+.biography img{
+margin:20px auto;
+}
+
+
+@media screen and (max-height:760px){
+#about{
+font-size:100%;
+line-height:30px;
+}
+
+.biography {
+padding:20px;
+}
+
+.biography img{
+margin:10px auto;
+}
+
+}
+
+/*END OF ABOUT*/
+
+/*---------------------------------------*/
+
+/*CONTACT*/
+#contact{
+background-color:white;
+background-image:url("mobile.webp");
+background-repeat:no-repeat;
+background-position:center;
+background-size:cover;
+}
+
+#contact img, .icons{
+width:35px;
+height:35px;
+background-color:white;
+border-radius:30px;
+margin:10px;
+transition:.5s;
+}
+
+#contact img:hover, .icons{
+background-color:transparent;
+border-bottom:1px solid white;
+border-left:1px solid dodgerblue;
+border-right:1px solid white;
+border-top:1px solid dodgerblue;
+}
+
+.coll{
+color:white;
+background-color:rgba(0, 0, 0, 0.5);
+padding:10px;
+}
+
+.coll h3{
+font-family:cursive;
+line-height:40px;
+text-align:center;
+}
+
+#contact li {
+list-style:none;
+display:block;
+}
+
+/*--------------------------------------*/
+
+/*FOOTER*/
+#footer{
+background:#333 ;
+padding:10px 10px;
+line-height:30px;
+text-align:center;
+font-family:cursive;
+color:white;
+}
